@@ -1,36 +1,59 @@
+
 import { Route, Routes } from 'react-router-dom'
 import mahasiswa from '../mahasiswa.json'
 
-// Titik awal ujian. Baca soal lengkap di https://uts-paw.mhabibalgifari.web.id/soal
-// dan contoh setiap kode yang diminta di https://uts-paw.mhabibalgifari.web.id/contoh
-// Rute wajib: /, /koleksi, /koleksi/:id, /tambah, /statistik, /tentang, dan *.
-// Provider Context diletakkan di dalam komponen App ini.
+import { KoleksiProvider } from './context/KoleksiContext'
+import Layout from './components/Layout'
 
-function Beranda() {
-  return (
-    <main>
-      <h1>Ujian Tengah Semester Pengembangan Aplikasi Web</h1>
-      <p>
-        {mahasiswa.nama || 'Nama belum diisi'} ({mahasiswa.nim || 'NIM belum diisi'})
-      </p>
-    </main>
-  )
-}
+import {
+  Beranda,
+  HalamanKoleksi,
+} from './pages/HalamanUtama'
+
+import DetailFilm from './pages/DetailFilm'
+import TambahFilm from './pages/TambahFilm'
+import Statistik from './pages/Statistik'
+import Tentang from './pages/Tentang'
 
 function TidakDitemukan() {
   return (
-    <main>
+    <main className="page-content">
       <h1>404</h1>
       <p>Halaman tidak ditemukan.</p>
     </main>
   )
 }
 
+function InformasiMahasiswa() {
+  return (
+    <div className="identitas">
+      {mahasiswa.nama} | {mahasiswa.nim}
+    </div>
+  )
+}
+
+function IsiAplikasi() {
+  return (
+    <Layout>
+      <InformasiMahasiswa />
+
+      <Routes>
+        <Route path="/" element={<Beranda />} />
+        <Route path="/koleksi" element={<HalamanKoleksi />} />
+        <Route path="/koleksi/:id" element={<DetailFilm />} />
+        <Route path="/tambah" element={<TambahFilm />} />
+        <Route path="/statistik" element={<Statistik />} />
+        <Route path="/tentang" element={<Tentang />} />
+        <Route path="*" element={<TidakDitemukan />} />
+      </Routes>
+    </Layout>
+  )
+}
+
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Beranda />} />
-      <Route path="*" element={<TidakDitemukan />} />
-    </Routes>
+    <KoleksiProvider>
+      <IsiAplikasi />
+    </KoleksiProvider>
   )
 }

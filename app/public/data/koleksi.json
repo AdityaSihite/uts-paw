@@ -1,10 +1,91 @@
 [
   {
     "id": "1",
-    "judul": "Contoh item pertama",
-    "kategori": "Contoh",
-    "fieldTema1": "ganti sesuai field tema",
-    "fieldTema2": 0,
-    "fieldTema3": "ganti sesuai field tema"
+    "judul": "The Truman Show",
+    "kategori": "Film",
+    "sutradara": "Peter Weir",
+    "tahunRilis": 1998,
+    "rating": 8.2
+  },
+
+  {
+    "id": "2",
+    "judul": "Deadpool",
+    "kategori": "Film",
+    "sutradara": "Tim Miller",
+    "tahunRilis": 2016,
+    "rating": 8.0
+  },
+
+  {
+    "id": "3",
+    "judul": "The Hangover",
+    "kategori": "Film",
+    "sutradara": "Todd Phillips",
+    "tahunRilis": 2009,
+    "rating": 7.7
+  },
+
+  {
+    "id": "4",
+    "judul": "Dumb and Dumber",
+    "kategori": "Film",
+    "sutradara": "Peter & Bobby Farrelly",
+    "tahunRilis": 1994,
+    "rating": 7.3
+  },
+
+  {
+    "id": "5",
+    "judul": "Caddyshack",
+    "kategori": "Film",
+    "sutradara": "Harold Ramisa",
+    "tahunRilis": 1980,
+    "rating": 7.2
+  },
+
+  {
+    "id": "6",
+    "judul": "Agak Laen",
+    "kategori": "Film",
+    "sutradara": "Muhadkly Acho",
+    "tahunRilis": 2024,
+    "rating": 7.3
+  },
+
+  {
+    "id": "7",
+    "judul": "Cek Toko Sebelah",
+    "kategori": "Film",
+    "sutradara": "Ernest Prakasa",
+    "tahunRilis": 2016,
+    "rating": 7.8
+  },
+
+  {
+    "id": "8",
+    "judul": "My Stupid Boss",
+    "kategori": "Film",
+    "sutradara": "Upi Avianto",
+    "tahunRilis": 2016,
+    "rating": 7.1
+  },
+
+  {
+    "id": "9",
+    "judul": "The Grand Budapest Hotel",
+    "kategori": "Film",
+    "sutradara": "Wes Anderson",
+    "tahunRilis": 2014,
+    "rating": 8.1
+  },
+
+  {
+    "id": "10",
+    "judul": "Borat",
+    "kategori": "Film",
+    "sutradara": "Larry Charles",
+    "tahunRilis": 2006,
+    "rating": 7.4
   }
 ]
