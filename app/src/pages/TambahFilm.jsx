@@ -39,31 +39,20 @@ export default function TambahFilm() {
       return
     }
 
-    if (
-      !form.sutradara.trim() ||
-      !form.tahunRilis ||
-      form.rating === ''
-    ) {
-      setError('Semua data film wajib diisi.')
-      return
-    }
-
-    const tahun = Number(form.tahunRilis)
-    const rating = Number(form.rating)
+    const tahun = form.tahunRilis === '' ? '' : Number(form.tahunRilis)
+    const rating = form.rating === '' ? '' : Number(form.rating)
 
     if (
-      !Number.isFinite(tahun) ||
-      tahun < 1888 ||
-      tahun > 2100
+      tahun !== '' &&
+      (!Number.isFinite(tahun) || tahun < 1888 || tahun > 2100)
     ) {
       setError('Tahun rilis tidak valid.')
       return
     }
 
     if (
-      !Number.isFinite(rating) ||
-      rating < 0 ||
-      rating > 10
+      rating !== '' &&
+      (!Number.isFinite(rating) || rating < 0 || rating > 10)
     ) {
       setError('Rating harus antara 0 sampai 10.')
       return
